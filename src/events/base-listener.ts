@@ -12,8 +12,7 @@ export abstract class Listener<T extends Event> {
     abstract onMessage(data: T["data"], msg: Message): void
 
     protected achWait = 5 * 1000;
-
-    private client: Stan;
+    protected client: Stan;
 
     constructor(client: Stan) {
         this.client = client;
